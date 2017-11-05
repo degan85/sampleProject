@@ -1,0 +1,61 @@
+doctype html
+head
+    html(lang="ko")
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    <!-- Latest compiled and minified CSS -->
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+
+    script(src="blockly/blockly_compressed.js")
+    script(src="blockly/blocks_compressed.js")
+    script(src="blockly/javascript_compressed.js")
+    script(src="blockly/ko.js")
+
+    <!-- jQuery library -->
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+
+    <!-- Latest compiled JavaScript -->
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+    script(src="https://code.jquery.com/jquery-1.12.4.js")
+    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js")
+
+    title test jquery animate</title>
+    link(rel="stylesheet" type="text/css" href="css/animate.css")
+body
+    nav.navbar.navbar-inverse
+        div.container-fluid
+            div.navbar-header
+                button(type="button", class="navbar-toggle", data-toggle="collapse", data-target="#myNavbar")
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href="#") Logo
+            div#myNavbar.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href="/mico/main") Home
+                    li
+                        a(href="/mico/about") About
+                    li
+                        a(href="/mico/project") Projects
+                    li
+                        a(href="/mico/contact") Contact
+
+                ul.nav.navbar-nav.navbar-right
+                    li
+                        a(href="#")
+                            span.glyphicon.glyphicon-log-in Login
+    //include #{id}
+    //include main
+    - if (id === 'main')
+        include main
+    - else if (id === 'project')
+        include original_html.html
+
+    script(src="js/common_1.js")
+    footer.container-fluid.text-center
+        p COMI
+
+

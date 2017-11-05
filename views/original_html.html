@@ -1,0 +1,208 @@
+
+<table width="100%">
+    <tr style="padding: 40px; ">
+        <td width="60%">
+            <div id ="container" style="width:100%; color:red;" onchange="alert('sss')">
+                <img src="img/bg2.jpg" alt="bg" style="width:100%;" id="background_img" onchange="alert('sss')">
+                <div id="girl" style="width:15%">
+                    <img src="img/girl.png" alt="girl" id="imgg" style="width:100%">
+                </div>
+                <div id="cloud" style="width:15%">
+                    <img src="img/cloud.png" alt="cloud" style="width:100%">
+                </div>
+            </div>
+        </td>
+        <td width="40%" id="blocklyArea">
+            <div id="blocklyDiv" style="position: absolute" onchange="alertF()"></div>
+            <xml id="toolbox" style="display: none">
+                <category name="Move" colour="#805ba5">
+                    <block type="running_object">
+                        <field name="running_object_pic">girl</field>
+                    </block>
+                    <block type="angle_move">
+                        <field name="move_angle">90</field>
+                        <field name="move_angle_distance">1</field>
+                    </block>
+
+                    <block type="direction_block_left">
+                        <field name="direction">right</field>
+                        <field name="distance">1</field>
+                    </block>
+                    <block type="direction_block_top">
+                        <field name="direction">up</field>
+                        <field name="distance">1</field>
+                    </block>
+                    <block type="effects">
+                        <field name="easing">easeInBounce</field>
+                    </block>
+                </category>
+                <category name="Logic" colour="#5C81A6">
+                    <block type="controls_if"></block>
+                    <block type="logic_compare">
+                        <field name="OP">EQ</field>
+                    </block>
+                    <block type="logic_operation">
+                        <field name="OP">AND</field>
+                    </block>
+                    <block type="logic_negate"></block>
+                    <block type="logic_boolean">
+                        <field name="BOOL">TRUE</field>
+                    </block>
+                    <block type="logic_null"></block>
+                    <block type="logic_ternary"></block>
+                </category>
+                <category name="Loops" colour="#5CA65C">
+                    <block type="controls_repeat_ext">
+                        <value name="TIMES">
+                            <shadow type="math_number">
+                                <field name="NUM">10</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="controls_whileUntil">
+                        <field name="MODE">WHILE</field>
+                    </block>
+                    <block type="controls_for">
+                        <field name="VAR">i</field>
+                        <value name="FROM">
+                            <shadow type="math_number">
+                                <field name="NUM">1</field>
+                            </shadow>
+                        </value>
+                        <value name="TO">
+                            <shadow type="math_number">
+                                <field name="NUM">10</field>
+                            </shadow>
+                        </value>
+                        <value name="BY">
+                            <shadow type="math_number">
+                                <field name="NUM">1</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="controls_forEach">
+                        <field name="VAR">j</field>
+                    </block>
+                    <block type="controls_flow_statements">
+                        <field name="FLOW">BREAK</field>
+                    </block>
+                </category>
+                <category name="Math" colour="#5C68A6">
+                    <block type="math_round">
+                        <field name="OP">ROUND</field>
+                        <value name="NUM">
+                            <shadow type="math_number">
+                                <field name="NUM">3.1</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                    <block type="math_single">
+                        <field name="OP">ROOT</field>
+                        <value name="NUM">
+                            <shadow type="math_number">
+                                <field name="NUM">9</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="math_trig">
+                        <field name="OP">SIN</field>
+                        <value name="NUM">
+                            <shadow type="math_number">
+                                <field name="NUM">45</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="math_constant">
+                        <field name="CONSTANT">PI</field>
+                    </block>
+                    <block type="math_number_property">
+                        <mutation divisor_input="false"></mutation>
+                        <field name="PROPERTY">EVEN</field>
+                        <value name="NUMBER_TO_CHECK">
+                            <shadow type="math_number">
+                                <field name="NUM">0</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="math_arithmetic">
+                        <field name="OP">ADD</field>
+                        <value name="A">
+                            <shadow type="math_number">
+                                <field name="NUM">1</field>
+                            </shadow>
+                        </value>
+                        <value name="B">
+                            <shadow type="math_number">
+                                <field name="NUM">1</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="math_on_list">
+                        <mutation op="SUM"></mutation>
+                        <field name="OP">SUM</field>
+                    </block>
+                    <block type="math_modulo">
+                        <value name="DIVIDEND">
+                            <shadow type="math_number">
+                                <field name="NUM">64</field>
+                            </shadow>
+                        </value>
+                        <value name="DIVISOR">
+                            <shadow type="math_number">
+                                <field name="NUM">10</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="math_constrain">
+                        <value name="VALUE">
+                            <shadow type="math_number">
+                                <field name="NUM">50</field>
+                            </shadow>
+                        </value>
+                        <value name="LOW">
+                            <shadow type="math_number">
+                                <field name="NUM">1</field>
+                            </shadow>
+                        </value>
+                        <value name="HIGH">
+                            <shadow type="math_number">
+                                <field name="NUM">100</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="math_random_int">
+                        <value name="FROM">
+                            <shadow type="math_number">
+                                <field name="NUM">1</field>
+                            </shadow>
+                        </value>
+                        <value name="TO">
+                            <shadow type="math_number">
+                                <field name="NUM">100</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="math_random_float"></block>
+                </category>
+                <category name="Variables" colour="#A65C81" custom="VARIABLE"></category>
+                <category name="Functions" colour="#9A5CA6" custom="PROCEDURE"></category>
+            </xml>
+        </td>
+    </tr>
+    <tr>
+        <td class="table_button">
+            <button type="button" id='run_button' class="btn btn-success btn-lg">Run</button>
+            <button type="button" id='see_code' class="btn btn-warning btn-lg" onclick="showCode()">see code</button>
+            <!--<button type="button" id='run_code' class="btn btn-warning btn-lg" onclick="runCode()">run code</button>-->
+            <button type="button" id='refresh_button' class="btn btn-info btn-lg" style="float: right;">Refresh<!----></button>
+        </td>
+        <td>
+        </td>
+    </tr>
+</table>
+
+<script type="text/javascript" src="blockly/blockly_js.js"></script>
+<script type="text/javascript" src="blockly/testAnimateJs3.js"></script>

@@ -1,0 +1,26 @@
+doctype html
+head
+    html(lang="ko")
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    <!-- Latest compiled and minified CSS -->
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+    title Main
+    link(rel="stylesheet" type="text/css" href="css/animate.css")
+body
+
+    div.jumbotron
+        div.container.text-center
+
+            //h1 MICO
+            img(src="img/main.jpg", alt="main image" width="100%")
+            h1 Art and Programming
+
+    div.container-fluid.bg-3.text-center
+        h3 Some of our Works
+        div.row
+            - for(var i=0; i<4; i++)
+                div.col-sm-3
+                    p sample #{i+1}
+                    img(src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image")

@@ -1,0 +1,58 @@
+#container {
+
+    position: relative;
+    background: yellow;
+    border-radius: 8px;
+}
+#size{
+    width: 400px;
+}
+#girl {
+    position: absolute !important;
+    top: 0px;
+    left: 0px;
+}
+#cloud {
+    position: absolute !important;
+}
+
+.no_dropped li {
+    width: 100%;
+    background-color: aliceblue;
+}
+
+#start {
+    width: 100%;
+    background-color: cadetblue;
+}
+
+input {
+    width: 30%;
+}
+
+table td.table_button {
+    padding: 10px;
+}
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+/* input {
+  -webkit-user-select: initial;
+  -khtml-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+} */
+
+/*
+select {
+    color: blueviolet;
+}*/

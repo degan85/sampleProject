@@ -1,14 +1,28 @@
 var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
+var session = require('express-session');
+var OrientoStore = require('connect-oriento')(session);
+var db_config = require('./config/db-config.json');
+var passport = require('./config/passport')(app);
+
+app.use(session({
+    secret: 'aeoifja12312!@#%@#akuheas',
+    resave: false,
+    saveUninitialized: true,
+    store: new OrientoStore({server: db_config})
+    // cookie: { secure: true }
+}));
+
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
 
+var auth = require('./routes/auth')(passport);
+var topic = require('./routes/topic')();
 var index = require('./routes/index');
 var users = require('./routes/users');
-
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,6 +38,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/topic', topic);
+app.use('/auth', auth);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
